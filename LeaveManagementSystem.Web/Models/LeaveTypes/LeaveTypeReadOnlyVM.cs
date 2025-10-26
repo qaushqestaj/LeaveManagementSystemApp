@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LeaveManagementSystem.Web.Data
+namespace LeaveManagementSystem.Web.Models.LeaveTypes
 {
-    public class LeaveType
+    public class LeaveTypeReadOnlyVM : BaseLeaveTypeVM
     {
-        public int Id { get; set; }
-        [Column(TypeName = "nvarchar(150)")]
         public string Name { get; set; } = string.Empty;
+
+        [Display(Name = "Allocation Days")]
         public int NumberOfDays { get; set; }
     }
+
 }

@@ -1,4 +1,4 @@
-@model LeaveManagementSystem.Web.Data.LeaveType
+@model LeaveTypeEditVM
 
 @{
     ViewData["Title"] = "Edit Leave Type";
@@ -24,12 +24,14 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-warning" />
-                 <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                <a asp-action="Index" class="btn btn-primary">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

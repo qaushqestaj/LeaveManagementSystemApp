@@ -1,4 +1,4 @@
-@model LeaveManagementSystem.Web.Data.LeaveType
+@model LeaveTypeCreateVM
 
 @{
     ViewData["Title"] = "Create Leave Type";
@@ -33,5 +33,7 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
